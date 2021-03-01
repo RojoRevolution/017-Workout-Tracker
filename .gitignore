@@ -3,3 +3,9 @@
 
 #Instructions Folder
 instructions
+
+#Package Lock
+package-lock.json
+
+#Node Modules
+node_modules
