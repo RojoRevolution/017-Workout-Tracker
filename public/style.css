@@ -13,16 +13,29 @@ body,
 }
 
 body {
+  background-color:#ececec;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
-  background-color: #5793fd;
   color: #ffffff;
   height: 80px;
-  padding: 10px;
+  padding: 0;
   line-height: 3;
   font-size: 1.2rem;
+}
+
+nav ul {
+  margin: 0;
+  padding:0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding:12px;
+
 }
 
 a,
@@ -33,7 +46,11 @@ a:visited {
   color: inherit;
 }
 
+nav a{
+  padding: 32px;
+}
 nav a:hover{
+  background-color: #434343;
   opacity: 0.7;
 }
 
@@ -100,7 +117,6 @@ input {
 }
 
 .wrapper {
-  background-color: #f2f8ff;
   padding-bottom: 100px;
 }
 
@@ -438,4 +454,11 @@ form > button {
     opacity: 0;
     right: -320px;
   }
+}
+
+
+
+/* Additional CSS Added */
+.main-header {
+  background-color: #2b2b2b;
 }
