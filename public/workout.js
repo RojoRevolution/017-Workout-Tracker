@@ -2,23 +2,6 @@ async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);
 
-  //========================
-  // This extra code I added will give me the total time for the main page, but not for the graph page
-  //========================
-  // let totalTime = 0;
-  // console.log("Last workout:", lastWorkout);
-  // console.log(lastWorkout.exercises.length);
-  // console.log(lastWorkout.exercises[0].duration);
-
-  // for (let i = 0; i < lastWorkout.exercises.length; i++) {
-  //   console.log('TEST')
-  //   let excerciseTime = lastWorkout.exercises[i].duration;
-  //   console.log(lastWorkout.exercises[i].duration)
-  //   totalTime = totalTime + excerciseTime;
-  // }
-
-  // console.log('Total Time', totalTime)
-
   if (lastWorkout) {
     document
       .querySelector("a[href='/exercise?']")
@@ -27,15 +10,9 @@ async function initWorkout() {
     const workoutSummary = {
       date: formatDate(lastWorkout.day),
       totalDuration: lastWorkout.totalDuration,
-      // This code works with the commented out code above
-      // totalDuration: totalTime,
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };
-    // ========================================================
-    // Logging Total Duration and Num of Excercises Based on the code given
-    console.log('Total Duration: ', workoutSummary.totalDuration)
-    console.log('Number of Excercises: ', workoutSummary.numExercises)
 
     renderWorkoutSummary(workoutSummary);
   } else {
