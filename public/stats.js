@@ -22,7 +22,11 @@ function generatePalette() {
 }
 
 function populateChart(data) {
-  let durations = data.map(({ totalDuration }) => totalDuration);
+  // Line 26 was pre-written for the assignment and doesn't seem to work with the charts properly
+  // let durations = data.map(({ totalDuration }) => totalDuration);
+
+  // I added the version on line 28 and also the function on line 181
+  let durations = duration(data);
   let pounds = calculateTotalWeight(data);
   let workouts = workoutNames(data);
   const colors = generatePalette();
@@ -171,6 +175,19 @@ function populateChart(data) {
       },
     },
   });
+}
+
+// Added this function
+function duration(data) {
+  let durations = [];
+
+  data.forEach(workout => {
+    workout.exercises.forEach(exercise => {
+      durations.push(exercise.duration);
+    });
+  });
+
+  return durations;
 }
 
 function calculateTotalWeight(data) {
