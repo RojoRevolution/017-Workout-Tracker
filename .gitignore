@@ -1,0 +1,11 @@
+#DS_Store
+.DS_Store
+
+#Instructions Folder
+instructions
+
+#Package Lock
+package-lock.json
+
+#Node Modules
+node_modules
