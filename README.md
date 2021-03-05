@@ -18,7 +18,7 @@ The app works by storing relevant information into a collection called workouts.
 
 Once your finished adding excercises, the main page will display totals for you. You can also visit the "dashboard" to view you totals data in a more pleasing manner using charts. 
 
-# :zap: Licence
+# :zap: License
 
 This project is covered under the license: MIT
 
